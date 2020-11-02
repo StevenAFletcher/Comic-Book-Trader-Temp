@@ -1,0 +1,63 @@
+﻿@model AddUser;
+
+@{
+
+    Layout = null;
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ComicBook Trader</title>
+</head>
+<body>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <table align="left">
+        <tbody>
+            <tr>
+                <td><a asp-controller="Home" asp-action="Index">Home</a></td>
+                <td><a asp-controller="Home" asp-action="Browse">Browse</a> </td>
+                <td><a href="#">Shop</a> </td>
+                <td><a href="#">Local Comics</a> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="right">
+        <tbody>
+            <tr>
+                <td><a asp-controller="Home" asp-action="MyAccount">My Account</a> </td>
+                <td><a asp-controller="Home" asp-action="Home">Logout</a> </td>
+                <td><a href="#">Help</a> </td>
+                <td><a href="#">About</a> </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <p></p>
+
+    <form method="post" align="middle">
+        <div asp-validation-summary="All">
+
+        </div>
+
+        User Name: @Model.UserName
+        <br />
+        First Name:@Model.FirstName
+        <br />
+        Last Name:@Model.LastName
+        <br />
+        Email Address:@Model.EmailAddress
+        <br />
+        Password:@Model.Password        
+        <br />
+        Location:@Model.Location
+          <br />
+
+          <button>Edit</button>
+          <button>Delete</button>
+
+    </form>
+
+</body>
+</html>
